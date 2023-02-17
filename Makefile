@@ -5,4 +5,4 @@ run:
 
 dist:
 	rm -rf statd
-	go build -o statd -ldflags "-s -w" -trimpath statd.go
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o statd -ldflags "-s -w" -trimpath statd.go
