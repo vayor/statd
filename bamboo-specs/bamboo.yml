@@ -28,4 +28,4 @@ build:
     -
       name: Executable
       location: statd
-  
+      pattern: statd  
