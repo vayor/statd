@@ -34,7 +34,7 @@ build:
   artifacts:
     -
       name: Executable
-      location: statd
+      location: ${bamboo.build.working.directory}
       pattern: statd
       required: false
       shared: false
