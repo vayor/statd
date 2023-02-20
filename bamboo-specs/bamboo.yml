@@ -16,7 +16,6 @@ docker_create:
     - script:
       - docker build -t docker.io/shyamin/hello:latest .
       - docker login --username shyamin --password-stdin ${bamboo.docker_password} docker.io
-#       - docker image push docker.io/shyamin/hello:latest
 
 build:
   tasks:
