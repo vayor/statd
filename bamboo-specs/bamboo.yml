@@ -13,7 +13,7 @@ stages:
 
 docker_create:
   tasks:
-    - scripts:
+    - script:
       - docker build -t shyaminayesh/hello-docker:latest .
 
 build:
