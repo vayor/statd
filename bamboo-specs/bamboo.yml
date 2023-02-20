@@ -22,10 +22,13 @@ build:
   tasks:
     - script:
       - make dist
+      - pwd
+      - ls -all
   docker:
     image: shyamin/hello:latest
   artifacts:
     -
       name: Executable
       location: statd
-      pattern: statd  
+      pattern: statd
+      required: false
