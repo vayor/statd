@@ -23,4 +23,4 @@ build:
     - script:
       - make dist
   docker:
-    image: shyamin:hello
+    image: shyamin/hello:latest
