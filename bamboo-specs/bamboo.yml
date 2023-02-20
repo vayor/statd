@@ -7,11 +7,11 @@ plan:
 
 stages:
   - Docker:
-    - docker
+    - containerize
   - Build:
     - build
 
-docker:
+containerize:
   tasks:
     - script:
       - docker build -t docker.io/shyamin/hello:latest .
