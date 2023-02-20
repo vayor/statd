@@ -13,3 +13,5 @@ build:
   tasks:
     - script:
       - make dist
+  docker:
+    image: golang:alpine
