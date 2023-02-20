@@ -24,7 +24,7 @@ build:
       - make dist
   artifacts:
     -
-    name: Executable
-    location: statd
+      name: Executable
+      location: statd
   docker:
     image: shyamin/hello:latest
