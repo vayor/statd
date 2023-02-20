@@ -10,7 +10,7 @@ stages:
     - containerize
   - Build:
     - build
-  - Clean
+  - Clean:
     - clean
 
 containerize:
