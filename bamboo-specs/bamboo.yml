@@ -10,6 +10,8 @@ stages:
     - containerize
   - Build:
     - build
+  - Clean
+    - clean
 
 containerize:
   tasks:
@@ -32,3 +34,8 @@ build:
       location: statd
       pattern: statd
       required: false
+
+clean:
+  tasks:
+    - script:
+      - clean
