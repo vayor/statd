@@ -1,15 +1,15 @@
 ---
 version: 2
-
 plan:
   project-key: ITOPS
   key: STATD
-  name: Build / Test
+  name: Build
 
 stages:
   - Build
+    - build
 
-Build:
+build:
   tasks:
     - script:
       - make dist
