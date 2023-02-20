@@ -13,6 +13,7 @@ stages:
   - Clean:
     - clean
 
+# JOB ( containerize )
 containerize:
   tasks:
     - script:
@@ -20,6 +21,7 @@ containerize:
       - docker login --username shyamin --password "${bamboo.docker_token}" docker.io
       - docker push docker.io/shyamin/hello:latest
 
+# JOB ( build )
 build:
   tasks:
     - script:
@@ -28,7 +30,15 @@ build:
       - ls -all
   docker:
     image: shyamin/hello:latest
+  artifacts:
+    -
+      name: Executable
+      location: statd
+      pattern: statd
+      required: false
+      shared: false
 
+# JOB ( clean )
 clean:
   tasks:
     - script:
