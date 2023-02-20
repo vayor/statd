@@ -28,12 +28,6 @@ build:
       - ls -all
   docker:
     image: shyamin/hello:latest
-  artifacts:
-    -
-      name: Executable
-      location: statd
-      pattern: statd
-      required: false
 
 clean:
   tasks:
