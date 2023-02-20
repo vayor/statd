@@ -41,5 +41,4 @@ build:
 # JOB ( clean )
 clean:
   tasks:
-    - script:
-      - clean
+    - clean
