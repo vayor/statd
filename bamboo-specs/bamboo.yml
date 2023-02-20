@@ -15,7 +15,6 @@ docker_create:
   tasks:
     - script:
       - docker build -t docker.io/shyamin/hello-docker:latest .
-      - docker image push docker.io/shyamin/hello-docker:latest
 
 build:
   tasks:
