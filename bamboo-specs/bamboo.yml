@@ -22,5 +22,9 @@ build:
   tasks:
     - script:
       - make dist
+  artifacts:
+    -
+    name: Executable
+    location: statd
   docker:
     image: shyamin/hello:latest
