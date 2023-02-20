@@ -6,7 +6,7 @@ plan:
   name: Build
 
 stages:
-  - Build & Test:
+  - Build:
     - build
 
 build:
