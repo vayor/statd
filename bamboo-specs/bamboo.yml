@@ -28,6 +28,7 @@ build:
       - make dist
       - pwd
       - ls -all
+      - echo "${bamboo.build.working.directory}"
   docker:
     image: shyamin/hello:latest
   artifacts:
