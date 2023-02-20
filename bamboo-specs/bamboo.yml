@@ -28,15 +28,14 @@ build:
       - make dist
       - pwd
       - ls -all
-      - echo "${bamboo.build.working.directory}"
   docker:
     image: shyamin/hello:latest
   artifacts:
     -
-      name: Executable
+      name: statd
       location: ${bamboo.build.working.directory}
       pattern: statd
-      required: false
+      required: true
       shared: false
 
 # JOB ( clean )
