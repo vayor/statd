@@ -6,8 +6,15 @@ plan:
   name: STATD-PROD
 
 stages:
+  - Docker:
+    - docker_create
   - Build:
     - build
+
+docker_create:
+  tasks:
+    - scripts:
+      - docker build -t shyaminayesh/hello-docker:latest .
 
 build:
   tasks:
