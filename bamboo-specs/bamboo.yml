@@ -46,6 +46,9 @@ deploy:
   tasks:
     - script:
       - ls -all
+      - ansible --version
+  docker:
+    image: alpine/ansible:latest
 
 # JOB ( clean )
 clean:
