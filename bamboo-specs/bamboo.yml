@@ -10,6 +10,8 @@ stages:
     - containerize
   - Build:
     - build
+  - Deploy:
+    - deploy
   - Clean:
     - clean
 
@@ -36,7 +38,14 @@ build:
       location: ${bamboo.build.working.directory}
       pattern: statd
       required: true
-      shared: false
+      shared: true
+
+
+# JOB ( deploy )
+deploy:
+  tasks:
+    - script:
+      - ls -all
 
 # JOB ( clean )
 clean:
